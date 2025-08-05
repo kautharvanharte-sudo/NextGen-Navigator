@@ -1,0 +1,178 @@
+/* === Base Styles === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #2193b0, #6dd5ed);
+  color: #333;
+}
+
+/* === Header === */
+header {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #2193b0;
+}
+
+/* === Navigation === */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+nav a {
+  text-decoration: none;
+  color: #2193b0;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #2193b0;
+  color: white;
+}
+
+/* === Main Content === */
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* === Section Headings === */
+h2 {
+  color: #2193b0;
+  border-bottom: 2px solid #6dd5ed;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+/* === Paragraphs === */
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* === Lists === */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+/* === Resource Links === */
+.content a {
+  position: relative;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #2193b0;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border: 2px solid #2193b0;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.content a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 3px;
+  background-color: #2193b0;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.content a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.content a:hover {
+  background-color: #2193b0;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* === Category Badges === */
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  margin-left: 0.5rem;
+  border-radius: 12px;
+  background-color: #eee;
+  color: #555;
+  font-weight: 600;
+}
+
+.badge.travel { background-color: #ffcc80; color: #8e44ad; }
+.badge.mental { background-color: #aed581; color: #2e7d32; }
+.badge.coding { background-color: #81d4fa; color: #0277bd; }
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+/* === Grid Layout for Homepage === */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.grid-item {
+  background-color: #ffffff;
+  border: 2px solid #2193b0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: #2193b0;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.grid-item:hover {
+  background-color: #2193b0;
+  color: white;
+  transform: translateY(-5px);
+}
+
+.grid-item h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.grid-item p {
+  margin-bottom: 0;
+  line-height: 1.4;
+}
